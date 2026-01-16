@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Bliss</title>
+    <link rel="stylesheet" href="coffee.css" />
+  </head>
+  <body>
+    <header>
+      <h2>☕ Coffee Bliss</h2>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h1>Fresh Coffee Everyday</h1>
+      <button onclick="scrollToMenu()">Order Now</button>
+    </section>
+
+    <section class="menu" id="menu">
+      <h2>Our Menu</h2>
+
+      <div class="menu-grid">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+          />
+          <h3>Espresso</h3>
+          <p>$3.00</p>
+          <button onclick="addToCart('Espresso',3)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+          <h3>Cappuccino</h3>
+          <p>$4.50</p>
+          <button onclick="addToCart('Cappuccino',4.5)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1511920170033-f8396924c348"
+          />
+          <h3>Latte</h3>
+          <p>$5.00</p>
+          <button onclick="addToCart('Latte',5)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART -->
+    <div class="cart" id="cart">
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <h4>Total: $<span id="total">0</span></h4>
+      <button class="checkout">Checkout</button>
+    </div>
+
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 <span id="count">0</span>
+    </div>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>
+        Coffee Bliss is your neighborhood café serving premium coffee made from
+        carefully selected beans. We believe every cup tells a story.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: contact@coffeebliss.com</p>
+      <p>Phone: +1 234 567 890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Coffee Bliss. All rights reserved.</p>
+    </footer>
+
+    <script src="coffee.js"></script>
+  </body>
+</html>
